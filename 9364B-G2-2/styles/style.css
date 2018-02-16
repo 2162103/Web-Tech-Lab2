@@ -28,9 +28,12 @@ header {
 
 /* row */
 
-.row {
+header .row {
     max-height: 1140px;
     margin: 0 auto;
+    background: linear-gradient(to right, rgba(250,150,0,1), rgba(0,150,200,1));
+    position: fixed;
+    width: 100%;
 }
 
 /* main navigator */
@@ -38,9 +41,7 @@ header {
 .main-nav {
     list-style: none;
     float: right;
-    margin-top: 25px;
-    margin-right: 50px;
-
+    margin-top: 12px;
 }
 
 .main-nav li {
@@ -78,17 +79,15 @@ header {
 
 #branding {
     float: left;
-    padding-top: 12px;
+    padding-bottom: 10px;
 }
 
 #branding h1 {
-    margin: 0;
-
-    /* text design/color */
+    
 }
+    /* text design/color */
 
 .highlight {
-    color: #43D032;
     font-weight: bold;
 }
 
@@ -223,6 +222,7 @@ h2:after {
 #about .info {
     display: flex;
     flex-direction: row;
+    background: rgba(0,0,0,0);
 }
 
 #about h2 {
