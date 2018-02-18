@@ -8,6 +8,7 @@
 
 body {
     font-family: tahoma;
+    
 }
 
 /* header */
@@ -28,24 +29,32 @@ header {
 
 /* row */
 
-.row {
+header .row {
     max-height: 1140px;
     margin: 0 auto;
+    background: linear-gradient(to right, rgba(250,150,0,1), rgba(0,150,200,1));
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    transition: background 0.5s ease-out;
 }
+header .row:hover {
+    background-position: 550px;
+}
+
 
 /* main navigator */
 
 .main-nav {
     list-style: none;
     float: right;
-    margin-top: 25px;
-    margin-right: 50px;
-
+    margin-top: 12px;
 }
 
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
+	padding-left: 20px;
 
 }
 
@@ -57,10 +66,10 @@ header {
 }
 
 .main-nav li a:hover {
-    color: #43D032;
-    border-bottom: 2px solid #B94407;
-    transition: all 0.5s ease-in;
-    padding: 15px 0;
+    color: black;
+    background: rgba(0,150,200,1);
+    transition: all 0.2s ease-out;
+    padding: 15px;
 }
 
 /* container */
@@ -78,38 +87,42 @@ header {
 
 #branding {
     float: left;
-    padding-top: 12px;
-}
-
-#branding h1 {
-    margin: 0;
-
-    /* text design/color */
-}
-
-.highlight {
-    color: #43D032;
+    padding-bottom: 10px;
+    animation: right 8s infinite;
     font-weight: bold;
+    text-transform: uppercase;
 }
-
+@keyframes right {
+    from {
+        margin:0px;
+    }
+    25% {
+        transform: translate(100px);
+    }
+}
 .message {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 150px;
+    animation: move 2s;
 }
-
-h1 {
-    color: white;
+@keyframes move {
+    from {
+        margin:0px;
+    }
+    25% {
+        transform: rotate(360deg);
+    }
 }
-
+.message h1 {
+    text-shadow: 0px 0px 10px rgba(250,150,0,1);
+    font-size: 45px;
+    text-align: center;
+}
 .message #author {
-    color: white;
-    font-size: 200%;
-    margin-left: 5%;
+    color: black;
+    text-shadow: 0px 0px 10px rgba(250,150,0,1);
+    font-size: 35px;
+    float: right;
 }
-
 .message a {
     text-decoration: none;
 }
@@ -134,116 +147,86 @@ h1 {
 /* button */
 
 .button-first {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+	padding: 50px;
+    float: left;
 }
 
 .button {
-    border: 1px solid #43D032;
-    padding: 10px 30px;
-    color: #43D032;
-    text-decoration: none;
-    border-radius: 20px;
-    margin-right: 15px;
-}
-
-.button-half {
-    background-color: #43D032;
+    background: linear-gradient(to right, rgba(250,150,0,0.2) 0%, rgba(0,35,50,0.2) 51%);
+    padding: 30px;
+    border-radius: 15px;
+    transition: 1s;
     color: black;
-    font-weight: bold;
+    border: solid;
 }
 
-.button-full:hover {
-    background-color: #43D032;
-    color: black;
-    transition: all 0.5s ease-in;
-    font-weight: bold;
+.button:hover {
+    background-position: 305px;
+    color: white;
+    border: solid rgba(0,205,450,1);
 }
 
-.button_1 {
-    height: 38px;
-    background: #e8491d;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #ffffff;
-}
 
 /* newsletter */
 
 #newsletter {
-    padding: 15px;
-    color: #ffffff;
-    background: #024B1F;
-    margin-top: 32%;
+	padding: 18px;
+	color: #ffffff;
+	background: #079B8F;
+	margin-top: 290px;
 }
-
 #newsletter h1 {
-    float: left;
+	float: left;
+	color: #fff;
+	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+	font: 30px 'ChunkFiveRegular';
 }
-
 #newsletter form {
-    float: right;
-    margin-top: 15px;
-}
+	float: right;
+	margin-top: 0;
 
+}
 #newsletter input[type="email"] {
-    padding: 4px;
-    height: 25px;
-    width: 250px;
+	padding: 4px;
+	height: 25px;
+	width: 250px;
 }
-
-
 /*about */
-
-h2 {
-    font-size: 245%;
-    margin-top: 20px;
-}
-
-h2:after {
-    display: block;
-    margin: 42px 0;
-    content: "";
-}
-
 #about {
-    margin-bottom: 75px;
-    background-color: aliceblue;
+    padding-top: 15px;
+    background: linear-gradient(to left, rgba(0,2,0,1),rgba(250,150,0,1),rgba(0,150,200,1), rgba(0,2,0,1));
+}
+#about h2 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    text-shadow: 0px 0px 30px rgba(250,150,0,1);
+}
+#about p {
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#img-side {
+    display: none;
 }
 
 #about .container {
-
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding-top: 10px;
-    padding-bottom: 100px;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.5)
 }
 
 #about .info {
     display: flex;
     flex-direction: row;
+    background: rgba(0,0,0,0);
 }
-
-#about h2 {
-    color: #0d2435;
-}
-
-#about h2::after {
-    border-bottom: 2px dashed #918D8D;
-
-}
-
 #about .info p {
     line-height: 270%;
-}
-
-#about .signature {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 150%;
-    float: right;
-    color: #0d2435;
-    opacity: .9;
 }
 
 #img-side {
@@ -260,71 +243,125 @@ h2:after {
 /* Boxes */
 
 #boxes {
-    background-color: aliceblue;
-    margin-top: -150px;
+    background: linear-gradient(to left, rgba(0,2,0,1),rgba(250,150,0,1),rgba(0,150,200,1), rgba(0,2,0,1));
+    padding-top: 1px;
 }
-
 #boxes h2 {
-    color: #0d2435;
-    text-align: center;
+	text-align: center;
+	text-shadow: 0px 1px 1px #4d4d4d;
+	color: #222;
+	font: 70px 'LeagueGothicRegular';
+	
 }
-
+#boxes h3 {
+	text-align: center;
+	color: black;	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px , 0 0 30px #EB4008, 0 0 40px #EB4008, 0 0 50px #EB4008, 0 0 75px #EB4008;
+	letter-spacing: 5px;
+	padding: 20px 20px;
+	font: 23px 'MisoRegular';
+}
 #boxes p {
     text-align: left;
     font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    color: white;
+	padding-top: 10px;
+	
 }
 
 #boxes .box {
     float: left;
     text-align: center;
     width: 30%;
-    padding: 10px;
+    margin: 2px;
+    height: 350px;
+    padding: 15px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 30px;
+	padding-bottom: 250px;
 }
 
 #boxes .box img {
-    width: 320px;
-    height: 200px;
+    width: 100%;
+    height: 55%;
+    border-radius: 30px
 }
-
 .dark {
-    padding: 15px;
-    background: #35424a;
-    color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 10px;
+	padding: 15px;
+	background: #35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
-
 /* Sidebar */
-
 aside#sidebar {
-    float: right;
-    width: 30%;
-    margin-top: 10px;
+	float: right;
+	width: 30%;
+	margin-top: 10px;
 }
-
-aside#sidebar .quote input,
-aside#sidebar .quote textarea {
-    width: 90%;
-    padding: 5px;
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+	width: 90%;
+	padding: 5px;
 }
-
 /* Main-col*/
-
+#main {
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../pictures/img10.JPG);
+	height: 60vh;
+	background-position: center;
+	background-size: cover;
+}
+#main p {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	line-height: 220%;
+	padding-top: 20px;
+}
 article#main-col {
-    float: left;
-    width: 65%;
+	float: left;
+	width: 65%;
 }
-
 .with-background {
-    background-color: #EEE;
+	background-color: #EEE;
 }
-
+.dark {
+	padding: 15px;
+	background: #35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* Sidebar */
+aside#sidebar {
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+	width: 90%;
+	padding: 5px;
+}
+/* Main-col*/
+#main {
+	background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../pictures/img10.JPG);
+	height: 60vh;
+	background-position: center;
+	background-size: cover;
+}
+#main p {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	line-height: 220%;
+	padding-top: 20px;
+}
+article#main-col {
+	float: left;
+	width: 65%;
+}
+.with-background {
+	background-color: #EEE;
+}
 /* Footer */
 
 footer {
     padding: 20px;
-    margin-top: 20px;
-    background-color: #024B1F;
+    background: linear-gradient(to right, rgba(250,150,0,1), rgba(0,150,200,1));
     color: white;
     text-align: center;
 }
