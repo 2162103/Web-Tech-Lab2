@@ -74,11 +74,11 @@ header {
 }
 @keyframes move {
  from {
-	margin:0px;
+ margin:0px;
 }
  25% {
  transform: rotate(180deg);
-	 margin-right: 215px;
+ margin-right: 215px;
 }
 }
 .message {
@@ -101,7 +101,6 @@ h1 {
 }
 .page-title {
 	text-align: center;
-	
 }
 /* button */
 .button-first {
@@ -141,16 +140,12 @@ h1 {
 	color: #ffffff;
 	background: #079B8F;
 	margin-top: 32%;
-	
-
-	
 }
 #newsletter h1 {
 	float: left;
 	color: #fff;
 	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 	font: 30px 'ChunkFiveRegular';
-	
 }
 #newsletter form {
 	float: right;
@@ -177,9 +172,7 @@ h2:after {
 	margin-left: auto;
 	border: 1px solid #424242;
 	background-color: #7ca0b6;
-	margin-bottom: 10px;
 	background-image: url(../pictures/img11.jpg);
-	
 }
 #about .container {
 	width: 80%;
@@ -196,7 +189,6 @@ h2:after {
 	color: #fff;
 	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 	font: 80px 'ChunkFiveRegular';
-		
 }
 #about h2::after {
 	border-bottom: 2px solid #918D8D;
@@ -222,7 +214,11 @@ h2:after {
 /* Boxes */
 
 #boxes {
-	background-color: aliceblue;
+	width: 100%;
+	border: 1px solid #424242;
+	background-image: url(http://www.midwinter-dg.com/blog_demos/css-text-shadows/images/letterpress.gif);
+	margin-right: auto;
+	margin-left: auto;
 }
 #boxes .container {
 	width: 90%;
@@ -230,13 +226,17 @@ h2:after {
 	overflow: hidden;
 }
 #boxes h2 {
-	color: #0d2435;
 	text-align: center;
+	text-shadow: 0px 1px 1px #4d4d4d;
+	color: #222;
+	font: 70px 'LeagueGothicRegular';
 }
 #boxes h3 {
-	color: #0d2435;
 	text-align: center;
-	padding-top: 20px;
+	color: black;	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px , 0 0 30px #EB4008, 0 0 40px #EB4008, 0 0 50px #EB4008, 0 0 75px #EB4008;
+	letter-spacing: 5px;
+	padding-top: 10px;
+	font: 30px 'MisoRegular';
 }
 #boxes p {
 	text-align: left;
