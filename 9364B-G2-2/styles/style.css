@@ -36,7 +36,12 @@ header .row {
     position: fixed;
     width: 100%;
     z-index: 3;
+    transition: background 0.5s ease-out;
 }
+header .row:hover {
+    background-position: 650px;
+}
+
 
 /* main navigator */
 
@@ -60,10 +65,10 @@ header .row {
 }
 
 .main-nav li a:hover {
-    color: #43D032;
-    border-bottom: 2px solid #B94407;
-    transition: all 0.5s ease-in;
-    padding: 15px 0;
+    color: black;
+    background: rgba(0,150,200,1);
+    transition: all 0.2s ease-out;
+    padding: 15px;
 }
 
 /* container */
@@ -82,30 +87,29 @@ header .row {
 #branding {
     float: left;
     padding-bottom: 10px;
-}
-
-#branding h1 {
-    
-}
-    /* text design/color */
-
-.highlight {
+    animation: right 8s infinite;
     font-weight: bold;
-    animation: move 8s infinite;
+    text-transform: uppercase;
 }
-
+@keyframes right {
+    from {
+        margin:0px;
+    }
+    25% {
+        transform: translate(100px);
+    }
+}
 .message {
     padding-top: 150px;
-    animation: move 5s;
+    animation: move 2s;
 }
 @keyframes move {
- from {
- margin:0px;
-}
- 25% {
- transform: rotate(180deg);
- margin-right: 215px;
-}
+    from {
+        margin:0px;
+    }
+    25% {
+        transform: rotate(360deg);
+    }
 }
 .message h1 {
     text-shadow: 0px 0px 10px rgba(250,150,0,1);
@@ -113,14 +117,12 @@ header .row {
     font-size: 45px;
     text-align: center;
 }
-
 .message #author {
     color: black;
     text-shadow: 0px 0px 10px rgba(250,150,0,1);
     font-size: 35px;
     float: right;
 }
-
 .message a {
     text-decoration: none;
 }
@@ -145,16 +147,15 @@ header .row {
 /* button */
 
 .button-first {
-    margin-top: 30px;
+    margin-top: 210px;
 }
 
 .button {
-    border: 1px solid #43D032;
+    border: 15px solid #43D032;
     padding: 10px 30px;
     color: #43D032;
     text-decoration: none;
-    border-radius: 20px;
-    margin-right: 15px;
+    border-radius: 10px;
 }
 
 .button-half {
